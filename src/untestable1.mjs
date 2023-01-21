@@ -1,6 +1,6 @@
 const millisPerDay = 24 * 60 * 60 * 1000;
 /*
-The rasult value depends on the day when this code is run so test with static value doesn't work.
+The result value depends on the day when this code is run so test with static value doesn't work.
 */
 export function daysUntilChristmas() {
   const now = new Date();
