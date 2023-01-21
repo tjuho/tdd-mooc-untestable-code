@@ -3,7 +3,7 @@ function diceRoll() {
   const max = 6;
   return Math.floor(Math.random() * (max + 1 - min) + min);
 }
-
+/* Returns random value so it can't be tested against static value */
 export function diceHandValue() {
   const die1 = diceRoll();
   const die2 = diceRoll();
