@@ -2,14 +2,6 @@ import argon2 from "@node-rs/argon2";
 import pg from "pg";
 
 export class PostgresUserDao {
-  static instance;
-
-  static getInstance() {
-    if (!this.instance) {
-      this.instance = new PostgresUserDao();
-    }
-    return this.instance;
-  }
 
   db = new pg.Pool({
     user: "untestable",
