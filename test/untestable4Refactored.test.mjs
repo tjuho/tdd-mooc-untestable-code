@@ -3,8 +3,9 @@ import { PasswordService, PostgresUserDao } from "../src/untestable4Refactored.m
 describe("Untestable 4: enterprise application", () => {
   let service;
   let db;
-  beforeEach(() => {
+  beforeEach(async () => {
     db = new PostgresUserDao();
+    await db.save({userId: 1, password: "secret"});
     service = new PasswordService(db);
   });
 
