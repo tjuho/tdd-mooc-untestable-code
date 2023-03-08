@@ -2,12 +2,14 @@ import { PasswordService, PostgresUserDao } from "../src/untestable4Refactored.m
 
 describe("Untestable 4: enterprise application", () => {
   let service;
+  let db;
   beforeEach(() => {
-    service = new PasswordService();
+    db = new PostgresUserDao();
+    service = new PasswordService(db);
   });
 
   afterEach(() => {
-    PostgresUserDao.getInstance().close();
+    db.close();
   });
 
   it("todo", async () => {
