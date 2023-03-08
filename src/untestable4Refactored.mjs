@@ -51,7 +51,7 @@ export class PasswordService {
     if (!argon2.verifySync(user.passwordHash, oldPassword)) {
       throw new Error("wrong old password");
     }
-    user.passwordHash = argon2.hashSync(newPassword);
+    user.password = newPassword;
     await this.users.save(user);
   }
 }
