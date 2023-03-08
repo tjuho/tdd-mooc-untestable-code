@@ -1,4 +1,5 @@
 import { PasswordService, PostgresUserDao } from "../src/untestable4Refactored.mjs";
+import { expect } from "chai";
 
 describe("Untestable 4: enterprise application", () => {
   let service;
@@ -13,7 +14,11 @@ describe("Untestable 4: enterprise application", () => {
     db.close();
   });
 
-  it("todo", async () => {
-    // TODO: write proper tests for both PasswordService and PostgresUserDao
+  it("change password without error", async () => {
+    service.changePassword(1,"secret","easy");
+  });
+  it("get user by id", async () => {
+    const user = await db.getById(1);
+    expect(user.userId).to.equal(1);
   });
 });
