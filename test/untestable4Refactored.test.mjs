@@ -1,4 +1,4 @@
-import { PasswordService, PostgresUserDao } from "../src/untestable4.mjs";
+import { PasswordService, PostgresUserDao } from "../src/untestable4Refactored.mjs";
 
 describe("Untestable 4: enterprise application", () => {
   let service;
