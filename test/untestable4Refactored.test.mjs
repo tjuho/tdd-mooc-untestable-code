@@ -21,4 +21,8 @@ describe("Untestable 4: enterprise application", () => {
     const user = await db.getById(1);
     expect(user.userId).to.equal(1);
   });
+  it("get null when user not found", async () => {
+    const user = await db.getById(15);
+    expect(user).to.equal(null);
+  });
 });
