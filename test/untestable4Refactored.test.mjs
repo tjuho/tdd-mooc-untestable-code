@@ -25,7 +25,7 @@ describe("Untestable 4: enterprise application", () => {
     const user = await db.getById(15);
     expect(user).to.equal(null);
   });
-  it("the password hash of the user should change when the password is changed", async () => {
+  it("the password hash of the user should change when the password is changes", async () => {
     const user1 = await db.getById(1);
     service.changePassword(1,"secret","easy");
     const user2 = await db.getById(1);
